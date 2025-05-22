@@ -18,6 +18,7 @@ body {
 }
 
 
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -131,18 +132,17 @@ body {
 }
 
 .hero-image {
-  width: 60%;         /* зменшено розмір */
+  width: 60%;
   height: auto;
   display: block;
-  margin-left: 5%;    /* трохи зсунуто вліво */
+  margin-left: 5%;
   margin-bottom: 20px;
 }
 
 .logo-image {
-  height: 40px;       /* або 30–50px, як зручно */
+  height: 40px;
   display: block;
 }
-
 
 .card {
   width: 220px;
@@ -159,13 +159,12 @@ body {
   padding-bottom: 20px;
 }
 
-/* обгортка-кнопка */
 .start-btn-wrapper {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  margin-left: 20px; /* зсув вправо */
+  margin-left: 20px; 
 }
 
 .start-btn-image {
@@ -178,6 +177,7 @@ body {
 .start-btn-wrapper:hover .start-btn-image {
   transform: scale(1.02);
 }
+
 .filter-btn {
   background: none;
   border: none;
@@ -187,13 +187,14 @@ body {
 }
 
 .filter-btn img {
-  height: 48px; /* або підбери під твій дизайн */
+  height: 48px;
   display: block;
 }
 
 .filter-btn:hover {
   transform: scale(1.05);
 }
+
 .filter-bar {
   display: flex;
   justify-content: space-between;
@@ -201,7 +202,6 @@ body {
   margin: 20px 0;
   padding: 0 20px;
 }
-
 
 .pagination {
   display: flex;
@@ -241,3 +241,9 @@ body {
   align-items: center;
   gap: 6px;
 }
+
+.login-forgot-img img {
+  height: 10px !important;
+  display: block;
+}
+
