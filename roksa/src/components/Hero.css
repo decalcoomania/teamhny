@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+/* Головний контейнер hero */
+.hero {
+  position: relative; /* Потрібно для абсолютного позиціювання фону всередині */
+  font-family: 'Unbounded', cursive, sans-serif;
+  background: #FFCEC8; /* Рожевий фон */
+  padding: 20px; /* Відступ всередині з усіх боків */
+  overflow: hidden; /* Щоб приховати зайве з фону */
+  min-height: 100vh; /* Висота на весь екран */
+  display: flex; /* Flexbox для вертикального вирівнювання */
+  flex-direction: column; /* Розташування дітей зверху вниз */
+  justify-content: space-between; /* Розподіл простору між дітьми */
+}
+
+/* Картинка-фон */
+.bg-image {
+  position: absolute; /* Абсолютне позиціонування в межах .hero */
+  top: 10%; /* Відступ згори (можеш змінювати для зміщення) */
+  left: 50%; /* Центрування по горизонталі */
+  transform: translateX(-50%); /* Корекція центрування */
+  margin-top: -255px; /* Тонке зміщення вгору */
+  width: 1750px; /* Розмір картинки — трішки менший за всю ширину */
+  opacity: 1; /* Повністю видима */
+  z-index: 0; /* Найнижчий шар, під усім іншим */
+  pointer-events: none; /* Щоб фон не перекривав кліки */
+}
+
+/* Усе інше буде над фоном */
+.hero > *:not(.bg-image) {
+  position: relative; /* Щоб елементи були поверх фону */
+  z-index: 1; /* Вищий шар, ніж фон */
+}
+
+/* Контейнер navbar */
+.navbar {
+  display: flex;
+  align-items: left;         /* Вирівнює все по центру по вертикалі */
+  justify-content: space-between;            /* Горизонтальні відступи */
+  margin-top: 57px;    
+  margin-right: 320px;        /* Можна забрати, якщо треба рівно з верхом */
+}
+
+.nav-links li {
+  cursor: pointer; /* Курсор у вигляді руки при наведенні */
+}
+
+.profile img {
+  width: 204px;
+  height: auto;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  margin-right: -275px;
+}
+
+.profile img:hover {
+  filter:  saturate(1.5);
+}
+
+/* Головний вміст hero */
+.hero-content {
+  display: flex; /* Розміщення тексту і картинки в один ряд */
+  justify-content: space-between; /* Розподіл простору */
+  align-items: center; /* Вирівнювання по вертикалі */
+  flex-wrap: wrap; /* Переносить елементи на новий рядок на малих екранах */
+  margin-top: 20px; /* Відступ зверху */
+}
+
+/* Блок з текстом */
+.text {
+  width: auto; /* Обмеження ширини */
+  margin-top: 110px;
+  margin-left: 50px;
+}
+
+h1 {
+  font-size: 86px;
+  font-weight: bold;
+  margin-top: -93px;
+  color: #2A1D0B;
+  line-height: 1.1;
+  margin-left: 90px; /* якщо потрібен відступ */
+}
+
+.text h1 .pink {
+  color: #F85A75; /* Рожевий */
+}
+
+h2 {
+  font-size: 86px;
+  font-weight: bold;
+  margin: -50px 0 0 90px; /* відступ зверху і ліворуч */
+  color: #2A1D0B;
+}
+
+/* Виділення кольором в h2 */
+.text h2 span {
+  color: #F85A75;
+}
+
+/* Абзац */
+.text p {
+  margin-top: 30px; /* Відступ зверху */
+  max-width: 1150px; /* Обмеження по ширині */
+  font-size: 16px; /* Розмір тексту */
+  margin-left: 100px;
+  opacity: 70%;
+}
+
+/* Картинка їжачка */
+.image img {
+  width: 600px;
+  height: auto;
+  margin-left: 1100px; /* Ширина зображення */
+  margin-top: -245px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 760px;
+
+  /* ⬇️ переміщення вверх */
+  transform: translateY(-250px);
+}
+
+/* Картинки статистики */
+.stats img {
+  width: 250px; /* Фіксована ширина */
+  height: auto; /* Автоматичне співвідношення сторін */
+}
+
+.buttons {
+  position: relative;         /* Відносне позиціонування */
+  right: 252px;                /* Зсув вправо на 100px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 85px;
+}
+
+
+/* Кнопка "Обрати мову" */
+.btn-choose {
+  width: 300px;               /* Фіксована ширина кнопки */
+  height: 80px;               /* Фіксована висота кнопки */
+  display: flex;              /* Робимо контейнер флекс, щоб центрувати зображення */
+  justify-content: center;    /* Центруємо зображення по горизонталі */
+  align-items: center;        /* Центруємо зображення по вертикалі */
+  overflow: visible;           /* Обрізаємо все, що виходить за межі контейнера */
+  cursor: pointer;            /* Курсор у вигляді руки при наведенні */
+}
+
+/* Зображення всередині кнопки "Обрати мову" */
+.btn-choose img {
+  max-width: 100%;            /* Максимальна ширина - повна ширина контейнера */
+  max-height: 100%;           /* Максимальна висота - повна висота контейнера */
+  object-fit: contain;        /* Масштабування зображення без обрізання і збереження пропорцій */
+  transition: transform 0.2s ease; /* Плавна анімація трансформації при наведенні */
+}
+
+/* Ефект збільшення зображення кнопки "Обрати мову" при наведенні */
+.btn-choose img:hover {
+  transform: scale(1.05);     /* Збільшення зображення на 5% */
+}
+
+/* Кнопка "Визначити рівень" */
+.btn-check {
+  width: 320px;               /* Фіксована ширина кнопки */
+  height: auto;               /* Фіксована висота кнопки */
+  display: flex;              /* Робимо контейнер флекс, щоб центрувати зображення */
+  justify-content: center;    /* Центруємо зображення по горизонталі */
+  align-items: center;        /* Центруємо зображення по вертикалі */
+  overflow: visible;           /* Обрізаємо все, що виходить за межі контейнера */
+  cursor: pointer;            /* Курсор у вигляді руки при наведенні */
+}
+
+/* Зображення всередині кнопки "Визначити рівень" */
+.btn-check img {
+  max-width: 100%;            /* Максимальна ширина - повна ширина контейнера */
+  max-height: 100%;           /* Максимальна висота - повна висота контейнера */
+  object-fit: contain;        /* Масштабування зображення без обрізання і збереження пропорцій */
+  transition: transform 0.2s ease; /* Плавна анімація трансформації при наведенні */
+}
+
+/* Ефект збільшення зображення кнопки "Визначити рівень" при наведенні */
+.btn-check img:hover {
+  transform: scale(1.05);     /* Збільшення зображення на 5% */
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;         /* Центрування по вертикалі */
+  margin-left: 80px;  
+  margin-top: -3px;                 /* Прибираємо відступи */
+}
+
+/* Меню */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-right: 230px;
+  margin-top: 4px;
+  align-items: center;         /* Центрування іконок по вертикалі */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-icon {
+  width: 84px;
+  height: auto;
+  margin-bottom: 5px;
+  filter: grayscale(0);
+  transition: filter 0.3s ease;
+}
+
+
+.nav-item:hover .nav-icon {
+  filter: brightness(1.2) saturate(1.5);
+}
+
+.join-section {
+  text-align: center;
+
+}
+
+.join-section h2 {
+  font-size: 86px;
+  font-weight: 700;
+  color: #2A1D0B;
+  margin-right: 100px;
+}
+
+.pink {
+  color: #F85A75;
+}
+
+.join-buttons {
+  display: flex;
+  gap: 170px;
+  justify-content: center;
+  margin-top: 180px;
+}
+.join-buttons-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Загальний стиль для кнопок */
+.join-button {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+/* Кнопка "Обрати мову" */
+.choose-lang-button {
+  width: 540px;
+  height: 420px;
+  border-radius: 8px;
+
+}
+
+/* Кнопка "Визначити рівень" */
+.check-level-button {
+  width: 680px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Верхні (extra) кнопки */
+.extra-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 408px;
+  pointer-events: none; /* дає змогу натискати зображення, але ігнорувати фон */
+}
+.button-discord,
+.button-discord-premium {
+  width: 220px;
+  pointer-events: auto; /* дає змогу клікати */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 480px;
+}
+
+/* Перша кнопка */
+.button-discord {
+  width: 323px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 63px;
+}
+
+.button-discord:hover {
+  transform: scale(1.05);
+}
+
+/* Друга кнопка */
+.button-discord-premium {
+  width: 450px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 46px;
+  
+}
+
+.button-discord-premium:hover {
+  transform: scale(1.05);
+}
+
+.bottom-images {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 300px;
+}
+
+.bottom-img {
+  width: 440px; /* або auto, або свій розмір */
+  height: auto;
+}
+
+.footer {
+  background-color: FFF8E8;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 290px;
+ width: 100vw;
+ 
+}
+
+
+.footer-content {
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+.footer p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #F85A75; /* рожевий */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
