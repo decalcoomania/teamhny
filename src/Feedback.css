@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Unbounded', sans-serif;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 120px 70px 30px;
+  max-width: 2500px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #FFF8E8;
+}
+
+.left-section {
+  flex: 1;
+  padding-left: 50px;
+  padding-right: 20px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 290px;
+  height: 74px;
+  margin-bottom: 80px;
+}
+
+.left-section h2 {
+  font-size: 28px;
+  font-weight: 501; /* h2 залишається нежирним */
+  margin-bottom: -5px; /* Невеликий відступ перед першим <p> */
+  margin-top: 50px; /* Значно більший відступ перед наступним h2 */
+}
+
+.left-section h2:first-of-type {
+  margin-top: 10px; /* Прибираємо верхній відступ для першого h2 */
+}
+
+.left-section p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 25px; /* Базовий відступ між <p> */
+  line-height: 1;
+}
+
+.left-section p:first-of-type {
+  margin-bottom: 22px; /* Трохи більший відступ між першим і другим <p> */
+}
+
+/* Селектор для другого <p> у кожному блоці */
+.left-section h2 + p + p {
+  margin-top: 12px; /* Відступ між другим і третім <p> у блоці */
+}
+
+/* Селектор для зменшення відступу між "вул. С.Бандери, 30" і "м. Львів, 79040, Україна" */
+.left-section h2:nth-of-type(2) + p + p + p {
+  margin-top: -18px; /* Менший відступ між "вул. С.Бандери, 30" і "м. Львів, 79040, Україна" */
+ /* Прибираємо нижній відступ перед наступним h2 */
+}
+
+.right-section {
+  flex: 1;
+  background-color: #FFCEC8;
+  padding: 50px 40px;
+  border-radius: 30px;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.right-section h1 {
+  font-size: 56px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.right-section p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: left;
+  color: #000;
+  width: 100%;
+}
+
+.right-section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-section input,
+.right-section textarea {
+  width: 100%;
+  padding: 14px 0 5px 0;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-family: 'Unbounded', sans-serif;
+  outline: none;
+  text-align: left;
+}
+
+.right-section input {
+  border-bottom: 1px solid #000;
+}
+
+.right-section input::placeholder,
+.right-section textarea::placeholder {
+  color: #000;
+}
+
+.right-section form input {
+  margin-top: 40px;
+}
+
+/* Стилі для тексту "Як можемо допомогти?" */
+.message-label {
+  margin-top: 65px;
+  margin-bottom: 0;
+  font-size: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Обгортка для textarea та риски */
+.textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.right-section textarea {
+  margin-top: 0;
+  resize: none;
+  overflow: hidden;
+  min-height: 40px;
+  line-height: 1.5;
+  border: none;
+}
+
+/* Стилі для окремої риски */
+.textarea-wrapper .underline {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+.right-section form button {
+  margin-top: 40px;
+}
+
+.right-section button {
+  background-color: #F85A75;
+  color: white;
+  border: none;
+  padding: 16px 56px;
+  border-radius: 30px;
+  font-size: 22px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: center;
+}
+
+.right-section button:hover {
+  background-color: #e54766;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #FFF8E8;
+  padding: 38px 50px;
+  border-radius: 30px;
+  text-align: center;
+  font-family: 'Unbounded', sans-serif;
+  max-width: 380px;
+}
+
+.modal-content p {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.modal-content button {
+  background-color: #F85A75;
+  color: white;
+  border: none;
+  padding: 14px 38px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modal-content button:hover {
+  background-color: #e54766;
+}

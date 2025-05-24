@@ -1,0 +1,187 @@
+.register-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #FFF7EF; /* Light beige background */
+    font-family: 'Unbounded', sans-serif; /* Added Unbounded font */
+}
+
+.register-left {
+    flex: 0.48; /* Adjusted to shift the boundary left */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #FFF7EF; /* Match the container background */
+}
+
+.register-left h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-left form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-left label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: left; /* Align labels to the left */
+    width: 100%; /* Ensure labels span the full width */
+}
+
+.register-left input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: #53585d;
+    background-color: #f7fafa; /* Set background color to CBD5E0 */
+    border-radius: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px; /* Define input height for better centering */
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.register-left button[type="submit"] {
+    background-color: #F85A75; /* Pink button */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.register-left button[type="submit"]:hover {
+    background-color: #e54766;
+}
+
+.account-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.account-text p {
+    margin: 0 0 15px 0; /* Increased margin-bottom for larger gap */
+}
+
+.account-text a {
+    color: #F85A75;
+    text-decoration: none;
+}
+
+.account-text a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    width: 400px; /* Match input field width */
+    text-align: center;
+}
+
+.separator-line {
+    flex: 1.5; /* Increased from 1 to 1.5 to make lines longer */
+    border-bottom: 1px solid #80888f; /* Gray color for the line */
+    margin: 0 10px;
+}
+
+.separator-text {
+    white-space: nowrap;
+    font-size: 12px; /* Smaller font size */
+    color: #53585d; /* Gray color */
+}
+
+.social-login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.google-btn, .facebook-btn {
+    position: relative; /* For centering text */
+    padding: 15px 10px 10px 40px; /* Add padding-left to accommodate the icon */
+    font-size: 16px;
+    border: 1px solid #d8d8d8;
+    border-radius: 0px; /* Rounded corners like in the image */
+    background-color: transparent; /* Make background transparent */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px; /* Position the icon on the left */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button-text {
+    flex: 1; /* Take up remaining space */
+    text-align: center; /* Center the text */
+    color: #53585d;
+}
+
+.register-right {
+    flex: 0.52; /* Adjusted to shift the boundary left */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF3D9; /* Slightly different beige for the right side */
+    padding: 20px; /* Reduced padding to allow image to grow larger */
+}
+
+.hedgehogs-img {
+    width: 80%; /* Further increased */
+    height: auto; /* Maintain aspect ratio */
+    max-height: none; /* Remove max-height restriction */
+    object-fit: contain;
+}
+
+/* Add gradient shadow at the boundary */
+.register-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 49.5%; /* Shifted to align with the adjusted boundary */
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #FFF3D9);
+    z-index: 1;
+}
