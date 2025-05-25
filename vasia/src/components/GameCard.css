@@ -1,0 +1,30 @@
+.game-card {
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #000;
+}
+
+.game-title {
+  background-color: #fff;
+  color: #C33048;
+  font-weight: bold;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  margin-bottom: 8px;
+}
+
+.game-description {
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.game-icon {
+  height: 64px;
+  align-self: flex-end;
+  margin-top: 16px;
+}
