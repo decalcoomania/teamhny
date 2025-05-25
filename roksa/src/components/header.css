@@ -1,0 +1,72 @@
+.logo img {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;         /* Центрування по вертикалі */
+  margin-left: 80px;  
+  margin-top: -3px;                 /* Прибираємо відступи */
+}
+
+/* Меню */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-right: 230px;
+  margin-top: 4px;
+  align-items: center;         /* Центрування іконок по вертикалі */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-icon {
+  width: 84px;
+  height: auto;
+  margin-bottom: 5px;
+  filter: grayscale(0);
+  transition: filter 0.3s ease;
+}
+
+
+.nav-item:hover .nav-icon {
+  filter: brightness(1.2) saturate(1.5);
+}
+/* Контейнер navbar */
+.navbar {
+  display: flex;
+  align-items: left;         /* Вирівнює все по центру по вертикалі */
+  justify-content: space-between;            /* Горизонтальні відступи */
+  margin-top: 57px;    
+  margin-right: 320px;        /* Можна забрати, якщо треба рівно з верхом */
+  background-color: transparent; /* або потрібний колір */
+}
+
+.nav-links li {
+  cursor: pointer; /* Курсор у вигляді руки при наведенні */
+}
+
+.profile img {
+  width: 204px;
+  height: auto;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  margin-right: -275px;
+}
+
+.profile img:hover {
+  filter:  saturate(1.5);
+}

@@ -5,11 +5,13 @@
   font-family: 'Unbounded', cursive, sans-serif;
   background: #FFCEC8; /* Рожевий фон */
   padding: 20px; /* Відступ всередині з усіх боків */
-  overflow: hidden; /* Щоб приховати зайве з фону */
+  /*overflow: hidden; /* Щоб приховати зайве з фону */
   min-height: 100vh; /* Висота на весь екран */
   display: flex; /* Flexbox для вертикального вирівнювання */
   flex-direction: column; /* Розташування дітей зверху вниз */
   justify-content: space-between; /* Розподіл простору між дітьми */
+  padding-bottom: 0px;
+  
 }
 
 /* Картинка-фон */
@@ -18,7 +20,7 @@
   top: 10%; /* Відступ згори (можеш змінювати для зміщення) */
   left: 50%; /* Центрування по горизонталі */
   transform: translateX(-50%); /* Корекція центрування */
-  margin-top: -255px; /* Тонке зміщення вгору */
+  margin-top: -290px; /* Тонке зміщення вгору */
   width: 1750px; /* Розмір картинки — трішки менший за всю ширину */
   opacity: 1; /* Повністю видима */
   z-index: 0; /* Найнижчий шар, під усім іншим */
@@ -29,31 +31,6 @@
 .hero > *:not(.bg-image) {
   position: relative; /* Щоб елементи були поверх фону */
   z-index: 1; /* Вищий шар, ніж фон */
-}
-
-/* Контейнер navbar */
-.navbar {
-  display: flex;
-  align-items: left;         /* Вирівнює все по центру по вертикалі */
-  justify-content: space-between;            /* Горизонтальні відступи */
-  margin-top: 57px;    
-  margin-right: 320px;        /* Можна забрати, якщо треба рівно з верхом */
-}
-
-.nav-links li {
-  cursor: pointer; /* Курсор у вигляді руки при наведенні */
-}
-
-.profile img {
-  width: 204px;
-  height: auto;
-  cursor: pointer;
-  transition: filter 0.3s ease;
-  margin-right: -275px;
-}
-
-.profile img:hover {
-  filter:  saturate(1.5);
 }
 
 /* Головний вміст hero */
@@ -189,54 +166,6 @@ h2 {
   transform: scale(1.05);     /* Збільшення зображення на 5% */
 }
 
-.logo img {
-  height: 55px;
-  width: auto;
-  cursor: pointer;
-}
-
-/* Логотип */
-.logo {
-  display: flex;
-  align-items: center;         /* Центрування по вертикалі */
-  margin-left: 80px;  
-  margin-top: -3px;                 /* Прибираємо відступи */
-}
-
-/* Меню */
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin-right: 230px;
-  margin-top: 4px;
-  align-items: center;         /* Центрування іконок по вертикалі */
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  color: #333;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.nav-icon {
-  width: 84px;
-  height: auto;
-  margin-bottom: 5px;
-  filter: grayscale(0);
-  transition: filter 0.3s ease;
-}
-
-
-.nav-item:hover .nav-icon {
-  filter: brightness(1.2) saturate(1.5);
-}
-
 .join-section {
   text-align: center;
 
@@ -351,24 +280,32 @@ h2 {
 }
 
 .footer {
-  background-color: FFF8E8;
-  padding: 30px 20px;
-  text-align: center;
-  margin-top: 290px;
- width: 100vw;
- 
+  background-color: #FFF8E8;
+  width: 100%;
+  padding: 30px 0;
+  margin-top: 620px; /* Для flex-розташування */
+  position: relative;
+  z-index: 10;
+  clip-path: inset(0 53px 0 53px); /* Обрізає по 5% з кожного боку */
 }
 
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 .footer-content {
-  max-width: 1900px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .footer p {
   color: #666;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .footer-links {
@@ -379,12 +316,14 @@ h2 {
 }
 
 .footer-links a {
-  color: #F85A75; /* рожевий */
+  color: #F85A75;
   text-decoration: none;
   font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+  color: #e04a65;
 }
 
