@@ -46,8 +46,8 @@ const Hero = () => {
             <div className="buttons">
               <div
                 className="btn-choose"
-                onClick={() => console.log("Обрати мову натиснуто")}
-              >
+                onClick={() => navigate('/languages')}
+              >  
                 <img src={btnChooseLang} alt="Обрати мову" />
               </div>
               <div

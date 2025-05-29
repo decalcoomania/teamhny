@@ -1,0 +1,55 @@
+.games-page {
+  min-height: 100vh;
+  padding: 32px 16px;
+  background-color: #FFF8E8;
+}
+
+.games-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.games-logo {
+  height: 40px;
+}
+
+.games-nav-bar a {
+  margin: 0 12px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.games-profile-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.games-streak {
+  font-weight: bold;
+}
+
+.games-flame {
+  height: 20px;
+}
+
+.games-profile-btn {
+  background-color: #F85A75;
+  color: #fff;
+  font-weight: 600;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.games-game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}

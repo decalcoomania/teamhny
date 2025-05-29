@@ -1,0 +1,28 @@
+.category-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.category-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 44px;
+  color: #000;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 106px;
+}
+
+.category-card {
+  height: 128px;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 12px;
+}
