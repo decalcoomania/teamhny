@@ -1,0 +1,265 @@
+.login-wrapper {
+    background-color: #fddedf;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-card {
+    background-color: #FFF8E8;
+    padding: 40px 32px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login-logo {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .login-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  .login-form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .login-form input {
+    width: 100%;
+    max-width: 600px;       /* або скільки потрібно */
+    padding: 12px 20px;     /* збільшений правий padding */
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box; /* враховує padding у ширину */
+  }
+  
+  .login-forgot {
+    font-size: 12px;
+    color: #ff4c7d;
+    text-decoration: none;
+    margin-top: -10px;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  
+  .login-button {
+    background-color: #ff4c7d;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #e3406e;
+  }
+  
+  .login-register {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  
+  .login-register a {
+    color: #ff4c7d;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 12px;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .login-social {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .social-btn-with-bg {
+    position: relative;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .social-bg {
+    display: block;
+    width: 380px;
+    height: auto;
+    border-radius: 14px;
+  }
+  
+  .social-overlay {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .register-image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .register-image {
+    width: 300px; /* або 100% з max-width */
+    display: block;
+  }
+  
+  /* Невидимий клік-зон */
+  .register-click-zone {
+    position: absolute;
+    top: 0;
+    left: 155px;     /* зміни під твою позицію "Зареєструватись" */
+    width: 120px;    /* ширина області з написом */
+    height: 100%;    /* або точна висота: 20–30px */
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .login-image-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+  }
+  
+  .login-image-button img {
+    width: 130%;
+    max-width: 400px; /* або як потрібно */
+    display: block;
+  }
+  
+  .login-image-button:hover img {
+    transform: scale(1.03);
+  }
+  
+  .label-img {
+    display: inline-block;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .label-img img {
+    height: 15px; /* або під твій макет */
+    display: block;
+    margin: 12px 0 1px; 
+    margin-left: 3px;
+  }
+  
+  .login-forgot-img img {
+    height: 13px !important;
+    display: block;
+    margin-left: 3px;
+  }
+  
+  .input-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    margin: 12px auto;
+  }
+  
+  .input-bg {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  .input-over-image {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    color: #000;
+    outline: none;
+    z-index: 2;
+  }
+  
+  /* Права частина — активна зона \"ока\" */
+  .eye-zone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .password-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* або більше */
+  }
+  
+  .password.text-input {
+    padding: 120px 400px 8882px 1600px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .eye-button {
+    position: absolute;
+    top: 55%;        /* було 50% — зміщено трохи вниз */
+    right: 20px;     /* було 12px — зміщено трохи вліво */
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .eye-button img {
+    width: 20px;
+    height: 20px;
+  }
