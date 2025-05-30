@@ -185,3 +185,9 @@
   margin-left: 490px;
   gap: 30px;
 }
+.exit-button-container {
+  margin-top: 10px;
+  cursor: pointer;
+  margin-left: -5px;
+}
+

@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
 
 import Hero from "./components/Hero";
 import Profile from "./components/profile";
@@ -7,16 +9,25 @@ import Languages from "./components/languages";
 import Contacts from "./components/contacts";
 import Recommendations from "./components/recommendations";
 import Games from "./components/games";
-import Login from "./components/Login";         // 🆕
-import Register from "./components/Register";   // 🆕
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 import "./App.css";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // ⛔ чи увійшов
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsLoggedIn(!!user);
+    });
+    return () => unsubscribe();
+  }, []);
 
   return (
     <Router>
+      
+
       <div>
         <Routes>
           <Route path="/" element={<Hero />} />
@@ -25,13 +36,12 @@ const App = () => {
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/games" element={<Games />} />
 
-          {/* 🛡 захищений маршрут */}
+          {/* Захищений маршрут */}
           <Route
             path="/profile"
             element={isLoggedIn ? <Profile /> : <Navigate to="/login" />}
           />
 
-          {/* 🆕 нові маршрути */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

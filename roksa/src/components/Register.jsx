@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  updateProfile
+} from "firebase/auth";
+import { auth, db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
+
 import hedgehogs from '../assets/stats/discord.png';
 import openedEye from '../assets/stats/opened-eye.png';
 import closedEye from '../assets/stats/closed-eye.png';
@@ -14,8 +24,8 @@ const Register = () => {
     password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
-  const navigate = useNavigate(); // 🧭
   const handleLogin = () => {
     navigate('/login');
   };
@@ -29,10 +39,54 @@ const Register = () => {
     setShowPassword(prev => !prev);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Реєстрація успішна!');
-    setFormData({ name: '', surname: '', email: '', password: '' });
+    const { name, surname, email, password } = formData;
+
+    try {
+      // Реєструємо користувача в Firebase Auth
+      const { user } = await createUserWithEmailAndPassword(auth, email, password);
+
+      // Оновлюємо профіль користувача в Firebase Auth
+      await updateProfile(user, {
+        displayName: `${name} ${surname}`
+      });
+
+      // Зберігаємо додаткові дані у Firestore
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        name,
+        surname,
+        email
+      });
+
+      alert("Реєстрація успішна!");
+      navigate("/profile");
+    } catch (error) {
+      alert("Помилка: " + error.message);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      alert("Вхід через Google успішний!");
+      navigate("/profile");
+    } catch (error) {
+      alert("Помилка: " + error.message);
+    }
+  };
+
+  const handleFacebookLogin = async () => {
+    const provider = new FacebookAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      alert("Вхід через Facebook успішний!");
+      navigate("/profile");
+    } catch (error) {
+      alert("Помилка: " + error.message);
+    }
   };
 
   return (
@@ -44,7 +98,6 @@ const Register = () => {
           <input
             type="text"
             name="name"
-            placeholder=""
             value={formData.name}
             onChange={handleInputChange}
             required
@@ -53,7 +106,6 @@ const Register = () => {
           <input
             type="text"
             name="surname"
-            placeholder=""
             value={formData.surname}
             onChange={handleInputChange}
             required
@@ -62,7 +114,6 @@ const Register = () => {
           <input
             type="email"
             name="email"
-            placeholder=""
             value={formData.email}
             onChange={handleInputChange}
             required
@@ -72,7 +123,6 @@ const Register = () => {
             <input
               type={showPassword ? 'text' : 'password'}
               name="password"
-              placeholder=""
               value={formData.password}
               onChange={handleInputChange}
               required
@@ -89,7 +139,8 @@ const Register = () => {
 
         <div className="account-text">
           <p>
-            Маєте акаунт? <a onClick={handleLogin} style={{ cursor: 'pointer' }}>Увійти</a>
+            Маєте акаунт?{" "}
+            <a onClick={handleLogin} style={{ cursor: 'pointer' }}>Увійти</a>
           </p>
           <div className="separator">
             <span className="separator-line"></span>
@@ -99,7 +150,7 @@ const Register = () => {
         </div>
 
         <div className="social-login">
-          <button className="google-btn">
+          <button onClick={handleGoogleLogin} className="google-btn">
             <img
               src="https://developers.google.com/identity/images/g-logo.png"
               alt="Google Icon"
@@ -107,7 +158,7 @@ const Register = () => {
             />
             <span className="button-text">Продовжити через Google</span>
           </button>
-          <button className="facebook-btn">
+          <button onClick={handleFacebookLogin} className="facebook-btn">
             <img
               src={facebookIcon}
               alt="Facebook Icon"

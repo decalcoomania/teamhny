@@ -1,24 +1,42 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 import Header from "../components/header";
 import bgImage2 from "../assets/stats/fon2.png";
 import bgImage3 from "../assets/stats/fon3.png";
 import changePhotoButton from "../assets/stats/changephoto.png";
-import extraImage from "../assets/stats/extra-image.png"; // заміни на свій файл
-
+import extraImage from "../assets/stats/extra-image.png";
 import defaultAvatar from "../assets/stats/defaultphoto.png";
 import avatar1 from "../assets/stats/1.png";
 import avatar2 from "../assets/stats/2.png";
 import avatar3 from "../assets/stats/3.png";
 import b1 from "../assets/stats/b1.png";
 import additionalButton from "../assets/stats/your-button.png";
+import exitIcon from "../assets/stats/exit.png"; // Імпорт іконки exit
 import "./profile.css";
 
 const Profile = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentAvatar, setCurrentAvatar] = useState(defaultAvatar);
+  const [userInfo, setUserInfo] = useState({
+    name: "Ім’я користувача",
+    email: "Email не знайдено"
+  });
+
+  const navigate = useNavigate();
+
   const avatars = [avatar1, avatar2, avatar3];
 
   useEffect(() => {
+    const user = auth.currentUser;
+    if (user) {
+      setUserInfo({
+        name: user.displayName || "Ім’я користувача",
+        email: user.email || "Email не знайдено"
+      });
+    }
+
     const savedAvatar = localStorage.getItem("selectedAvatar");
     if (savedAvatar) {
       setCurrentAvatar(savedAvatar);
@@ -31,12 +49,17 @@ const Profile = () => {
     setShowModal(false);
   };
 
-  const handleButtonClick = () => {
-    console.log("Кнопка під аватаркою натиснута!");
-  };
-
   const handleAdditionalButtonClick = () => {
     console.log("Нова кнопка натиснута!");
+  };
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/"); // Після виходу – на головну
+    } catch (error) {
+      console.error("Помилка при виході:", error);
+    }
   };
 
   return (
@@ -52,30 +75,26 @@ const Profile = () => {
         </div>
       </div>
 
-    
-
-      {/* Додаткове зображення + кнопка */}
       <div className="additional-image-block">
-        <img
-          src={b1}
-          alt="Додаткова картинка"
-          className="additional-image"
-        />
+        <img src={b1} alt="Додаткова картинка" className="additional-image" />
         <div className="under-additional-button" onClick={handleAdditionalButtonClick}>
           <img src={additionalButton} alt="Нова дія" />
         </div>
       </div>
 
-        {/* Додаткова просто картинка */}
-        <div className="extra-image-block">
+      <div className="extra-image-block">
         <img src={extraImage} alt="Додаткова ілюстрація" className="extra-image" />
+      </div>
+
+      <div className="user-info">
+        <div><strong>Привіт, {userInfo.name}!</strong></div>
+        <div><strong>E-mail:</strong> {userInfo.email}</div>
+        {/* Іконка "Вийти" замість тексту */}
+        <div className="exit-button-container" onClick={handleLogout}>
+          <img src={exitIcon} alt="Вийти" className="exit-icon" />
         </div>
-<div className="user-info">
-        <div><strong>Привіт, Володимир Побережець!</strong></div>
-        <div><strong>E-mail:</strong> potuzhni123@gmail.com</div>
-        <div><strong>Дата народження:</strong> 04.04.2006</div>
-    </div>
-      {/* Модальне вікно */}
+      </div>
+
       {showModal && (
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -86,9 +105,7 @@ const Profile = () => {
                   key={index}
                   src={avatar}
                   alt={`Аватар ${index + 1}`}
-                  className={`avatar-option ${
-                    currentAvatar === avatar ? "selected" : ""
-                  }`}
+                  className={`avatar-option ${currentAvatar === avatar ? "selected" : ""}`}
                   onClick={() => handleAvatarChange(avatar)}
                 />
               ))}
