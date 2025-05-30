@@ -51,7 +51,7 @@
   align-items: left;         /* Вирівнює все по центру по вертикалі */
   justify-content: space-between;            /* Горизонтальні відступи */
   margin-top: 57px;    
-  margin-right: 320px;        /* Можна забрати, якщо треба рівно з верхом */
+  margin-right: 120px;        /* Можна забрати, якщо треба рівно з верхом */
   background-color: transparent; /* або потрібний колір */
 }
 
@@ -64,7 +64,7 @@
   height: auto;
   cursor: pointer;
   transition: filter 0.3s ease;
-  margin-right: -275px;
+  margin-right: 105px;
 }
 
 .profile img:hover {

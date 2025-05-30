@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
 .test-page {
   position: relative;
   min-height: 100vh;
@@ -5,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #FFCEC8;
-  font-family: Arial, sans-serif;
+  font-family: 'Unbounded', cursive, sans-serif;
 }
 
 .test-wrapper {
@@ -198,3 +199,4 @@
 .close-button:hover {
   background-color: #E04A65;
 }
+
