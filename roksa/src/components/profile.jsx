@@ -13,7 +13,7 @@ import avatar2 from "../assets/stats/2.png";
 import avatar3 from "../assets/stats/3.png";
 import b1 from "../assets/stats/b1.png";
 import additionalButton from "../assets/stats/your-button.png";
-import exitIcon from "../assets/stats/exit.png"; // Імпорт іконки exit
+import exitIcon from "../assets/stats/exit.png";
 import "./profile.css";
 
 const Profile = () => {
@@ -50,7 +50,7 @@ const Profile = () => {
   };
 
   const handleAdditionalButtonClick = () => {
-    console.log("Нова кнопка натиснута!");
+    navigate("/test"); // Перехід до тесту
   };
 
   const handleLogout = async () => {
@@ -78,7 +78,7 @@ const Profile = () => {
       <div className="additional-image-block">
         <img src={b1} alt="Додаткова картинка" className="additional-image" />
         <div className="under-additional-button" onClick={handleAdditionalButtonClick}>
-          <img src={additionalButton} alt="Нова дія" />
+          <img src={additionalButton} alt="Пройти тест" />
         </div>
       </div>
 
@@ -89,7 +89,6 @@ const Profile = () => {
       <div className="user-info">
         <div><strong>Привіт, {userInfo.name}!</strong></div>
         <div><strong>E-mail:</strong> {userInfo.email}</div>
-        {/* Іконка "Вийти" замість тексту */}
         <div className="exit-button-container" onClick={handleLogout}>
           <img src={exitIcon} alt="Вийти" className="exit-icon" />
         </div>

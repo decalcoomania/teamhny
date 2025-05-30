@@ -1,0 +1,228 @@
+[
+    {
+      "Level": "A1",
+      "Question": "Choose the correct sentence:",
+      "Option1": "He go to school.",
+      "Option2": "He goes to school.",
+      "Option3": "He going to school.",
+      "Option4": "He gone to school.",
+      "CorrectAnswer": "He goes to school."
+    },
+    {
+      "Level": "A1",
+      "Question": "What’s the opposite of 'cold'?",
+      "Option1": "Hot",
+      "Option2": "Cool",
+      "Option3": "Snow",
+      "Option4": "Freeze",
+      "CorrectAnswer": "Hot"
+    },
+    {
+      "Level": "A1",
+      "Question": "Complete the sentence: I ____ a dog.",
+      "Option1": "has",
+      "Option2": "have",
+      "Option3": "having",
+      "Option4": "had",
+      "CorrectAnswer": "have"
+    },
+    {
+      "Level": "A1",
+      "Question": "Select the correct plural form:",
+      "Option1": "Childs",
+      "Option2": "Childes",
+      "Option3": "Children",
+      "Option4": "Child",
+      "CorrectAnswer": "Children"
+    },
+    {
+      "Level": "A1",
+      "Question": "Choose the correct preposition: I live ___ London.",
+      "Option1": "at",
+      "Option2": "on",
+      "Option3": "in",
+      "Option4": "by",
+      "CorrectAnswer": "in"
+    },
+    {
+      "Level": "A2",
+      "Question": "Choose the correct question form:",
+      "Option1": "She can plays tennis?",
+      "Option2": "Can she play tennis?",
+      "Option3": "Can plays she tennis?",
+      "Option4": "She can play tennis?",
+      "CorrectAnswer": "Can she play tennis?"
+    },
+    {
+      "Level": "A2",
+      "Question": "Find the synonym of 'big':",
+      "Option1": "Small",
+      "Option2": "Tiny",
+      "Option3": "Large",
+      "Option4": "Low",
+      "CorrectAnswer": "Large"
+    },
+    {
+      "Level": "A2",
+      "Question": "Complete the sentence: They ____ to the cinema last night.",
+      "Option1": "go",
+      "Option2": "goes",
+      "Option3": "went",
+      "Option4": "gone",
+      "CorrectAnswer": "went"
+    },
+    {
+      "Level": "A2",
+      "Question": "Choose the correct answer: I have been here ____ Monday.",
+      "Option1": "for",
+      "Option2": "since",
+      "Option3": "on",
+      "Option4": "by",
+      "CorrectAnswer": "since"
+    },
+    {
+      "Level": "A2",
+      "Question": "Which sentence is correct?",
+      "Option1": "She don't like coffee.",
+      "Option2": "She doesn't likes coffee.",
+      "Option3": "She doesn't like coffee.",
+      "Option4": "She not like coffee.",
+      "CorrectAnswer": "She doesn't like coffee."
+    },
+    {
+      "Level": "B1",
+      "Question": "Choose the correct sentence:",
+      "Option1": "She didn’t went to work.",
+      "Option2": "She didn’t go to work.",
+      "Option3": "She doesn’t went to work.",
+      "Option4": "She not go to work.",
+      "CorrectAnswer": "She didn’t go to work."
+    },
+    {
+      "Level": "B1",
+      "Question": "Which word means 'to start something new'?",
+      "Option1": "Quit",
+      "Option2": "Begin",
+      "Option3": "Stop",
+      "Option4": "Finish",
+      "CorrectAnswer": "Begin"
+    },
+    {
+      "Level": "B1",
+      "Question": "Choose the correct option: If it ____ tomorrow, we will cancel the picnic.",
+      "Option1": "rains",
+      "Option2": "rain",
+      "Option3": "rained",
+      "Option4": "raining",
+      "CorrectAnswer": "rains"
+    },
+    {
+      "Level": "B1",
+      "Question": "Choose the correct form: I have never ____ sushi.",
+      "Option1": "ate",
+      "Option2": "eaten",
+      "Option3": "eat",
+      "Option4": "eating",
+      "CorrectAnswer": "eaten"
+    },
+    {
+      "Level": "B1",
+      "Question": "What does 'borrow' mean?",
+      "Option1": "Give something permanently",
+      "Option2": "Take and return later",
+      "Option3": "Buy something new",
+      "Option4": "Throw away something",
+      "CorrectAnswer": "Take and return later"
+    },
+    {
+      "Level": "B2",
+      "Question": "Choose the correct form: I wish I ____ more time to study.",
+      "Option1": "have",
+      "Option2": "had",
+      "Option3": "has",
+      "Option4": "will have",
+      "CorrectAnswer": "had"
+    },
+    {
+      "Level": "B2",
+      "Question": "Which of these means 'in addition'?",
+      "Option1": "However",
+      "Option2": "Although",
+      "Option3": "Moreover",
+      "Option4": "Despite",
+      "CorrectAnswer": "Moreover"
+    },
+    {
+      "Level": "B2",
+      "Question": "Complete the sentence: He’s the man ____ car was stolen.",
+      "Option1": "who",
+      "Option2": "which",
+      "Option3": "whose",
+      "Option4": "whom",
+      "CorrectAnswer": "whose"
+    },
+    {
+      "Level": "B2",
+      "Question": "Choose the best option: She succeeded ____ working very hard.",
+      "Option1": "because",
+      "Option2": "despite",
+      "Option3": "by",
+      "Option4": "although",
+      "CorrectAnswer": "by"
+    },
+    {
+      "Level": "B2",
+      "Question": "What is the synonym of 'accurate'?",
+      "Option1": "Wrong",
+      "Option2": "Precise",
+      "Option3": "Fast",
+      "Option4": "Complicated",
+      "CorrectAnswer": "Precise"
+    },
+    {
+      "Level": "C1",
+      "Question": "Choose the best word: The new policy will inevitably ____ some criticism.",
+      "Option1": "evoke",
+      "Option2": "provoke",
+      "Option3": "convince",
+      "Option4": "consider",
+      "CorrectAnswer": "provoke"
+    },
+    {
+      "Level": "C1",
+      "Question": "What is the meaning of 'meticulous'?",
+      "Option1": "Careless",
+      "Option2": "Thorough",
+      "Option3": "Hasty",
+      "Option4": "Lazy",
+      "CorrectAnswer": "Thorough"
+    },
+    {
+      "Level": "C1",
+      "Question": "Choose the best completion: Hardly ____ when the phone rang.",
+      "Option1": "I had left",
+      "Option2": "had I left",
+      "Option3": "I left",
+      "Option4": "I was leaving",
+      "CorrectAnswer": "had I left"
+    },
+    {
+      "Level": "C1",
+      "Question": "Choose the correct sentence:",
+      "Option1": "Were I you, I would take the job.",
+      "Option2": "If I were you, I will take the job.",
+      "Option3": "I would take the job if I was you.",
+      "Option4": "If I be you, I’d take the job.",
+      "CorrectAnswer": "Were I you, I would take the job."
+    },
+    {
+      "Level": "C1",
+      "Question": "What does the word 'ubiquitous' mean?",
+      "Option1": "Rare",
+      "Option2": "Confusing",
+      "Option3": "Found everywhere",
+      "Option4": "Dangerous",
+      "CorrectAnswer": "Found everywhere"
+    }
+  ]
+  

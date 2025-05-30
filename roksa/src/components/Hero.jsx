@@ -23,11 +23,9 @@ const Hero = () => {
 
   return (
     <>
-      
-
       <div className="hero">
         <img src={bgImage} alt="Background" className="bg-image" />
- <Header />
+        <Header />
         <div className="hero-content">
           <div className="text">
             <h1>
@@ -52,7 +50,7 @@ const Hero = () => {
               </div>
               <div
                 className="btn-check"
-                onClick={() => console.log("Визначити рівень натиснуто")}
+                onClick={() => navigate('/test')}
               >
                 <img src={btnCheckLevel} alt="Визначити рівень" />
               </div>
