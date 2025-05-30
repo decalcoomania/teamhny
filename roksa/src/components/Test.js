@@ -8,6 +8,8 @@ const Test = () => {
   const navigate = useNavigate();
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [questions, setQuestions] = useState([]);
+  const [showResults, setShowResults] = useState(false);
+  const [resultLevel, setResultLevel] = useState("A1");
   const totalQuestions = testData.length;
   const answeredQuestions = selectedAnswers.filter(answer => answer !== undefined).length;
   const progress = (answeredQuestions / totalQuestions) * 100;
@@ -34,7 +36,12 @@ const Test = () => {
     else if (score <= 20) level = "B2";
     else level = "C1";
 
-    navigate("/results", { state: { score, level } });
+    setResultLevel(level);
+    setShowResults(true);
+  };
+
+  const handleCloseResults = () => {
+    navigate("/");
   };
 
   if (questions.length === 0) {
@@ -99,6 +106,21 @@ const Test = () => {
           </button>
         </div>
       </div>
+
+      {showResults && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>Вітаємо!</h2>
+            <p>Ваш рівень володіння англійською мовою - {resultLevel}</p>
+            <button
+              className="close-button"
+              onClick={handleCloseResults}
+            >
+              Закрити
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

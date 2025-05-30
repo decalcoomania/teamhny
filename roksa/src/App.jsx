@@ -12,7 +12,6 @@ import Games from "./components/games";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Test from "./components/Test";
-import Results from "./components/Results";
 
 import "./App.css";
 
@@ -42,10 +41,6 @@ const App = () => {
           <Route
             path="/test"
             element={isLoggedIn ? <Test /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/results"
-            element={isLoggedIn ? <Results /> : <Navigate to="/login" />}
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
