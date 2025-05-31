@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
 .register-container {
     display: flex;
     min-height: 100vh;
     background-color: #FFF7EF; /* Light beige background */
-    font-family: 'Unbounded', sans-serif; /* Added Unbounded font */
+      font-family: 'Unbounded', cursive, sans-serif;
 }
 
 .register-left {

@@ -5,17 +5,18 @@
     display: flex;
     justify-content: center;
     align-items: center; /* центруємо все */
-    background-color: #FFD6D3;
+    background-color: #FFCEC8;
     height: 100vh; /* повна висота вікна */
     overflow: hidden; /* забороняємо скрол */
   }
 
 .grammar-container {
     background-color: #FFF8E8;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    width: calc(100vw - 120px); /* більші відступи по 60px з кожного боку */
-    height: calc(100vh - 60px);
+    width: 1750px; /* більші відступи по 60px з кожного боку */
+    height: auto;
+    margin-top: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -23,49 +24,16 @@
   
 .grammar-header {
   background-color: #FFF8E8;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  border-bottom: 2px solid #C33048;
+  padding: 10px 30px;
+  margin-top: -30px;
+  gap: 170px;
 }
 
-.grammar-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #C33048;
-}
-
-.grammar-nav a {
-  text-decoration: none;
-  margin: 0 10px;
-  color: #2A1D0B;
-  font-weight: 500;
-}
-
-.grammar-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.grammar-profile button {
-  background-color: #C33048;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 15px;
-  font-weight: 600;
-  cursor: pointer;
-}
 
 .grammar-main {
   flex: 1; /* займає весь доступний простір */
   overflow-y: auto; /* якщо буде забагато контенту, з'явиться скрол всередині, а не для всього body */
-  padding: 40px 30px;
+  padding: 40px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +46,7 @@
   margin-bottom: 15px;
   text-align: center;
   color: #2A1D0B;
+  margin-right: 1250px;
 }
 
 .grammar-highlight {
@@ -99,7 +68,7 @@
   padding: 20px;
   margin-top: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 35%;
+  width: 45%;
 }
 
 .grammar-course-card h3 {
@@ -185,6 +154,7 @@
     display: block;
     margin-bottom: 30px; 
     margin-top: -15px;/* відступ тільки знизу */
+    margin-right: 200px;
   }
   
   .grammar-recommendation-title img {
@@ -196,17 +166,17 @@
   }
   .grammar-grid-wrapper {
     position: relative;
-    width: fit-content;
+    width: 500px;
     height: auto;
-    margin-left: auto;
+    margin-left: 940px;
     margin-top: -10px; /* якщо треба підняти/опустити */
   }
   
   .grammar-grid-image {
-    max-width: 600px;
+    max-width: 650px;
     height: auto;
     display: block;
-    margin-top: -635px;
+    margin-top: -685px;
     margin-right: 60px;
   }
   

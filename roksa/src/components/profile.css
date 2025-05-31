@@ -182,7 +182,7 @@
   margin-top: -650px;
   font-size: 18px;
   line-height: 1.6;
-  margin-left: 490px;
+  margin-left: 460px;
   gap: 30px;
 }
 .exit-button-container {
@@ -190,4 +190,48 @@
   cursor: pointer;
   margin-left: -5px;
 }
+.strike {
+  display: block;
+  margin-left: 985px;
+  max-width: 710px;
+  height: auto;
+  margin-top: 230px;
+}
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
 
+.standalone-image {
+  width: 210px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.images-wrapper {
+  flex-direction: column;
+  margin-top: -670px; /* Відступ зверху і знизу */
+  margin-left: 822px;
+}
+
+.custom-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 57px;
+  margin-top: -290px;
+  margin-left: 820px;
+}
+
+.custom-button-container {
+  cursor: pointer;
+}
+
+.custom-button-image {
+  width: 170px; /* можеш змінити під себе */
+  transition: transform 0.3s ease;
+}
+
+.custom-button-image:hover {
+  transform: scale(1.05);
+}

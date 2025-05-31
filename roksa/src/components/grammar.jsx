@@ -30,8 +30,9 @@ function Grammar() {
   return (
     <div className="grammar-page">
       <div className="grammar-container">
+        <div className="grammar-header">
         <Header />
-
+</div>
         <main className="grammar-main">
           <div className="grammar-title-image">
             <img src={textGrammar} alt="Текст: вчися послідовно й відкривай нові горизонти" />
