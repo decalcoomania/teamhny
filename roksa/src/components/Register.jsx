@@ -10,10 +10,10 @@ import {
 import { auth, db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
-import hedgehogs from '../assets/stats/discord.png';
+import hedgehogs from '../assets/stats/hedgehogs.png';
 import openedEye from '../assets/stats/opened-eye.png';
 import closedEye from '../assets/stats/closed-eye.png';
-import facebookIcon from '../assets/stats/contacts.png';
+import facebookIcon from '../assets/stats/facebook-icon.png';
 import './Register.css';
 
 const Register = () => {

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+.grammar-page {
+    font-family: 'Unbounded', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* центруємо все */
+    background-color: #FFD6D3;
+    height: 100vh; /* повна висота вікна */
+    overflow: hidden; /* забороняємо скрол */
+  }
+
+.grammar-container {
+    background-color: #FFF8E8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: calc(100vw - 120px); /* більші відступи по 60px з кожного боку */
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.grammar-header {
+  background-color: #FFF8E8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 2px solid #C33048;
+}
+
+.grammar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #C33048;
+}
+
+.grammar-nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #2A1D0B;
+  font-weight: 500;
+}
+
+.grammar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grammar-profile button {
+  background-color: #C33048;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.grammar-main {
+  flex: 1; /* займає весь доступний простір */
+  overflow-y: auto; /* якщо буде забагато контенту, з'явиться скрол всередині, а не для всього body */
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.grammar-main h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #2A1D0B;
+}
+
+.grammar-highlight {
+  color: #C33048;
+}
+
+.grammar-recommendation {
+  background-color: #FFD6D3;
+  border-radius: 10px;
+  padding: 20px 30px;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.grammar-recommendation h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2A1D0B;
+  margin-bottom: 15px;
+}
+
+.grammar-course-card {
+  background-color: #FFF8E8;
+  border: 2px solid #C33048;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.grammar-course-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.grammar-course-card p {
+  color: #C33048;
+  font-weight: 500;
+}
+
+.grammar-course-card button {
+  background-color: #C33048;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.grammar-course-card label {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #2A1D0B;
+}
+
+.grammar-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.grammar-level-card {
+  background-color: #FFF8E8;
+  border: 2px solid #C33048;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.grammar-level-card span {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #C33048;
+  margin-bottom: 10px;
+}
+
+.grammar-level-card button {
+  background-color: #C33048;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .grammar-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .grammar-main h1 {
+    font-size: 20px;
+  }
+}

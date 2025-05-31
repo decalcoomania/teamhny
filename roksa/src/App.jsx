@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 
+import "./App.css";
+
 import Hero from "./components/Hero";
 import Profile from "./components/profile";
 import Languages from "./components/languages";
@@ -12,8 +14,8 @@ import Games from "./components/games";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Test from "./components/Test";
+import Grammar from "./components/grammar"; // ✅ Імпорт Grammar
 
-import "./App.css";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,6 +36,7 @@ const App = () => {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/grammar" element={<Grammar />} /> {/* ✅ Доданий маршрут */}
           <Route
             path="/profile"
             element={isLoggedIn ? <Profile /> : <Navigate to="/login" />}
