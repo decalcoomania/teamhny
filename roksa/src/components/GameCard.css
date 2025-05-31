@@ -1,30 +1,42 @@
 .game-card {
-  padding: 16px;
-  border-radius: 16px;
+  cursor: pointer;
+  width: 420px;
+  height: 420px;
+  border-radius: 32px;
+  padding: 32px;
+  border: 3px solid #C33048;
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* заголовок ліворуч */
   justify-content: space-between;
-  border: 2px solid #000;
-}
-
-.game-title {
   background-color: #fff;
-  color: #C33048;
-  font-weight: bold;
-  display: inline-block;
-  padding: 6px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.game-card-header {
+  padding: 8px 20px;
   border-radius: 9999px;
-  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 16px;
 }
 
-.game-description {
-  color: #000;
+.game-card-description {
+  font-size: 18px;
   font-weight: 500;
-  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: auto;
 }
 
-.game-icon {
-  height: 64px;
-  align-self: flex-end;
-  margin-top: 16px;
+.game-card-icon {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin: 20px auto 0 auto;
+  display: block;
 }

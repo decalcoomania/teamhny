@@ -1,0 +1,48 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Вміст модального вікна */
+.modal-content {
+  background-color: #fff8e8;
+  padding: 30px 40px;
+  border-radius: 20px;
+  max-width: 400px;
+  text-align: center;
+  border: 3px solid #c33048;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Заголовок */
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #c33048  !important;
+}
+.modal-close-btn {
+  margin-top: 20px;
+  padding: 12px 20px !important;
+  background-color: #F85A75 !important;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Unbounded', sans-serif;
+  cursor: pointer;
+  border: 2px solid #c33048;
+}
+
+.modal-image {
+  width: 120px;
+  height: auto;
+  margin: 20px auto 0 auto;
+  display: block;
+}
