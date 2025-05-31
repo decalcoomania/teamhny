@@ -1,59 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
+import Header from "../components/header";
 import "../App.css";
 import "./grammar.css";
 
+import textGrammar from "../assets/stats/text_grammar.png";
+import recForBegin from "../assets/stats/rec_for_begin.png";
+import gridLevelsFull from "../assets/stats/grid_full.png";
+import gridA1 from "../assets/stats/grid_A1.png";
+import closeIcon from "../assets/stats/close_grammar.png"; // ❗️імпорт іконки закриття
+
 function Grammar() {
+  const [isChecked, setIsChecked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [currentLevel, setCurrentLevel] = useState("");
+
+  const handleLevelClick = (level) => {
+    if (!isChecked) {
+      setCurrentLevel(level);
+      setShowModal(true);
+    } else {
+      alert(`Ти перейшла до курсу ${level}`);
+    }
+  };
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <div className="grammar-page">
       <div className="grammar-container">
-        <header className="grammar-header">
-          <div className="grammar-logo">
-            <img src="/logo.svg" alt="Logo" />
-            <span>Talk Track</span>
-          </div>
-          <nav className="grammar-nav">
-            <a href="#">Головна</a>
-            <a href="#">Мови</a>
-            <a href="#">Рекомендації</a>
-            <a href="#">Ігри</a>
-            <a href="#">Контакти</a>
-          </nav>
-          <div className="grammar-profile">
-            <span>69 🔥</span>
-            <button>Профіль</button>
-          </div>
-        </header>
+        <Header />
 
         <main className="grammar-main">
-          <h1>
-            Складніші курси стануть доступні після завершення попередніх —{" "}
-            <span className="grammar-highlight">
-              вчися послідовно й відкривай нові горизонти!
-            </span>
-          </h1>
+          <div className="grammar-title-image">
+            <img src={textGrammar} alt="Текст: вчися послідовно й відкривай нові горизонти" />
+          </div>
 
           <section className="grammar-recommendation">
-            <h2>Рекомендовано для початківців:</h2>
-
-            <div className="grammar-course-card">
-              <h3>Граматика рівня A1</h3>
-              <p>Курс, що охоплює граматику для початківців.</p>
-              <button>Переглянути відео</button>
-              <label>
-                <input type="checkbox" /> Позначити, як пройдене
-              </label>
+            <div className="grammar-recommendation-title">
+              <img src={recForBegin} alt="Рекомендовано для початківців" />
             </div>
 
-            <div className="grammar-levels">
-              {["A2", "B1", "B2", "C1"].map((level) => (
-                <div className="grammar-level-card" key={level}>
-                  <span>{level}</span>
-                  <button>Детальніше</button>
-                </div>
-              ))}
+            <div className="grammar-content-blocks">
+              {/* Блок A1 */}
+              <div className="grammar-a1-wrapper">
+                <img src={gridA1} alt="Граматика рівня A1" className="grammar-a1-image" />
+                <button
+                  className="grammar-a1-btn"
+                  onClick={() => alert("Переглянути відео для рівня A1")}
+                />
+                <label className="grammar-a1-checkbox">
+                  <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+                  <span>Позначити, як пройдене</span>
+                </label>
+              </div>
+
+              {/* Блоки A2–C1 */}
+              <div className="grammar-grid-wrapper">
+                <img
+                  src={gridLevelsFull}
+                  alt="Рівні A2, B1, B2, C1"
+                  className="grammar-grid-image"
+                />
+                <button className="grammar-grid-btn btn-a2" onClick={() => handleLevelClick("A2")} />
+                <button className="grammar-grid-btn btn-b1" onClick={() => handleLevelClick("B1")} />
+                <button className="grammar-grid-btn btn-b2" onClick={() => handleLevelClick("B2")} />
+                <button className="grammar-grid-btn btn-c1" onClick={() => handleLevelClick("C1")} />
+              </div>
             </div>
           </section>
         </main>
+
+        {/* Модальне вікно */}
+        {showModal && (
+          <div className="modal-overlay">
+            <div className="modal-content">
+              <p>Щоб пройти рівень {currentLevel}, спочатку завершіть попередній курс!</p>
+              <button className="modal-close-btn" onClick={() => setShowModal(false)}>
+                <img src={closeIcon} alt="Закрити" />
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
