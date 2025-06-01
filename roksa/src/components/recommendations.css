@@ -1,24 +1,101 @@
+.recommendations-page {
+  position: relative;
+  min-height: 890px;
+  padding: 30px 50px;
+  background-color: #FFCEC8;
+  z-index: 1;
+}
+
 .profile-bg-image2 {
-  position: fixed; /* Змінив з absolute на fixed для кращого покриття */
+  position: fixed;
   width: 1750px;
   height: 900px;
-  z-index: -1; /* Нижче за Header */
+  z-index: -1;
   opacity: 1;
-  object-fit: cover; /* Щоб зображення повністю покривало фон */
+  object-fit: cover;
   border-radius: 30px;
   margin-top: 5px;
   margin-left: 50px;
 }
 
-.recommendations-page {
-  position: relative; /* Додаємо для створення контексту накладання */
-  min-height: 890px;
-  padding: 30px ;
-  background-color: #FFCEC8;
-  z-index: 1; /* Вище за фон, але нижче за Header */
+.recommendations-container {
+  max-width: 1200px;
+  margin: 100px auto 0 auto;
+  padding-left: 120px;
 }
-.header {
-  position: relative;
-  z-index: 2; /* Вище за все */
-  
+
+.recommendations-titles {
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  justify-content: center;
+  gap: 34px;
+  margin-bottom: 16px;
+  margin-top: 120px;
+  margin-right: 90px;
+}
+
+.category-title {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+}
+
+.category-title.black {
+  color: #000000;
+}
+
+.category-title.serials {
+  color: #F85A75;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 460px);
+  grid-template-rows: repeat(4, 160px);
+  gap: 24px;
+  justify-content: center;
+}
+
+.category-content {
+  background-color: white;
+  border: 3px solid #F85A75;
+  border-radius: 30px;
+  width: 360px;
+  height: 140px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+.category-img {
+  width: 86px;
+  height: 123px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.category-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-title {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  color: #C33048;
+}
+
+.item-description {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 0;
+  color: #000000;
 }
