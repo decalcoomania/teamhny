@@ -13,13 +13,13 @@
   justify-content: space-between; /* Розподіл простору між дітьми */
   padding-bottom: -300px;
   z-index: 1;
-  
+  padding-top: 20px;
 }
 
 /* Картинка-фон */
 .profile-bg-image2 {
   position: absolute; /* Абсолютне позиціонування в межах .hero */
-  margin-top: 18px; /* Тонке зміщення вгору */
+  margin-bottom: 140px; /* Тонке зміщення вгору */
   margin-left: 53px;
   width: 1752px; /* Розмір картинки — трішки менший за всю ширину */
   height: 900px;
@@ -31,7 +31,7 @@
 /* Картинка-фон */
 .profile-bg-image3 {
   position: absolute; /* Абсолютне позиціонування в межах .hero */
-  margin-top: 125px; /* Тонке зміщення вгору */
+  margin-top: 105px; /* Тонке зміщення вгору */
   margin-left: 130px;
   width: 1590px; /* Розмір картинки — трішки менший за всю ширину */
   height: 760px;
@@ -45,7 +45,7 @@
   position: absolute;
   z-index: 10; /* Найвищий рівень - поверх усього */
   cursor: pointer;
-  margin-top: -63px;
+  margin-top: 63px;
   margin-left: 1370px;
   width: 119px; /* Розмір за потребою */
   height: auto;
@@ -65,7 +65,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 120px;
 }
 
 .user-avatar {

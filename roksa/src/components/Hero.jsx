@@ -22,10 +22,10 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <>
+    <><Header />
       <div className="hero">
         <img src={bgImage} alt="Background" className="bg-image" />
-        <Header />
+        
         <div className="hero-content">
           <div className="text">
             <h1>
@@ -123,6 +123,7 @@ const Hero = () => {
           </div>
         </footer>
       </div>
+      
     </>
   );
 };

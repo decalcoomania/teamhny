@@ -1,5 +1,5 @@
 .modal-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,18 +14,18 @@
 /* Вміст модального вікна */
 .modal-content {
   background-color: #fff8e8;
-  padding: 30px 40px;
-  border-radius: 20px;
+  padding: 40px 50px;
+  border-radius: 30px;
   max-width: 400px;
   text-align: center;
-  border: 3px solid #c33048;
+  border: 5px solid #F85A75;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* Заголовок */
 .modal-content h2 {
-  margin-bottom: 15px;
-  color: #c33048  !important;
+  margin-top: 55px;
+  color: #F85A75  !important;
 }
 .modal-close-btn {
   margin-top: 20px;
@@ -37,7 +37,7 @@
   font-weight: 600;
   font-family: 'Unbounded', sans-serif;
   cursor: pointer;
-  border: 2px solid #c33048;
+  border: 2px solid #F85A75;
 }
 
 .modal-image {

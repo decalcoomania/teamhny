@@ -18,6 +18,7 @@ function Languages() {
   };
 
   return (
+    
     <div className="languages-container">
       <img src={bgImageLang} alt="Background" className="bg-image-lang" />
 

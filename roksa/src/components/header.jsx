@@ -17,29 +17,32 @@ import premprofIcon from "../assets/stats/premprof.png";
 const Header = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsLoggedIn(!!user);
     });
+
     return () => unsubscribe();
   }, []);
 
-  const handleProfileClick = () => {
-    navigate("/profile");
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
 
-  const handleLoginClick = () => {
-    navigate("/login");
-  };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const handlePremiumClick = () => {
-    navigate("/premium");
-  };
+  const handleProfileClick = () => navigate("/profile");
+  const handleLoginClick = () => navigate("/login");
+  const handlePremiumClick = () => navigate("/premium");
 
   return (
-    <header className="header">
-      <nav className="navbar">
+    <header className={`header`}>
+      <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="logo" onClick={() => navigate("/")}>
           <img src={logoImage} alt="Логотип" />
         </div>
@@ -52,7 +55,7 @@ const Header = () => {
             <img src={languagesIcon} alt="Мови" className="nav-button" />
           </li>
           <li className="nav-item" onClick={() => navigate("/recommendations")}>
-            <img src={recommendationsIcon} alt="Рек recommendation" className="nav-button" />
+            <img src={recommendationsIcon} alt="Рекомендації" className="nav-button" />
           </li>
           <li className="nav-item" onClick={() => navigate("/games")}>
             <img src={gamesIcon} alt="Ігри" className="nav-button" />

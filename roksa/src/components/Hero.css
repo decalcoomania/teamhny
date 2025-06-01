@@ -11,7 +11,7 @@
   flex-direction: column; /* Розташування дітей зверху вниз */
   justify-content: space-between; /* Розподіл простору між дітьми */
   padding-bottom: 0px;
-  
+  padding-top: 120px;
 }
 
 /* Картинка-фон */

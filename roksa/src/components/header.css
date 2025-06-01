@@ -1,7 +1,30 @@
-.logo img {
-  height: 55px;
-  width: auto;
-  cursor: pointer;
+
+
+/* Хедер */
+.header {
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 50px; /* Щоб був трохи нижче */
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding: 0 120px;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Фон при скролі */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Логотип */
@@ -9,18 +32,20 @@
   display: flex;
   align-items: center;
   margin-left: 80px;
-  margin-top: -3px;
+  height: 60px;
+}
+.logo img {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
 }
 
-/* Меню */
 .nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
   padding: 0;
-  margin-right: -200px; /* Reduced from 230px to decrease distance to Premium button */
-  margin-left: 600px;
-  margin-top: 4px;
+  margin: 0 0 0 300px; /* Було 600px, стало 300px — зсунули лівіше */
   align-items: center;
 }
 
@@ -33,7 +58,6 @@
   font-size: 14px;
   font-weight: 500;
 }
-
 .nav-icon {
   width: 84px;
   height: auto;
@@ -41,25 +65,14 @@
   filter: grayscale(0);
   transition: filter 0.3s ease;
 }
-
 .nav-item:hover .nav-icon {
   filter: brightness(1.2) saturate(1.5);
 }
-
-/* Контейнер navbar */
-.navbar {
-  display: flex;
-  align-items: left;
-  justify-content: space-between;
-  margin-top: 57px;
-  margin-right: 120px;
-  background-color: transparent;
-}
-
 .nav-links li {
   cursor: pointer;
 }
 
+/* Профіль */
 .profile img {
   width: 204px;
   height: auto;
@@ -67,15 +80,11 @@
   transition: filter 0.3s ease;
   margin-right: 105px;
 }
-
 .profile img:hover {
   filter: saturate(1.5);
 }
 
-.profile-button-container {
-  margin-left: 20px;
-}
-
+/* Кнопки */
 .auth-button.login-access-button {
   background: none;
   border: none;
@@ -84,24 +93,20 @@
   margin-top: 16px;
   margin-left: 35px;
 }
-
 .auth-button.login-access-button img.login-icon {
   width: 80px;
   height: 20px;
 }
-
 .auth-button.profile-access-button {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
 }
-
 .auth-button.profile-access-button img.profile-icon {
   width: 180px;
   height: 37px;
 }
-
 .premium-access-button {
   background: none;
   border: none;
@@ -111,18 +116,14 @@
   align-items: center;
   justify-content: center;
 }
-
 .premium-icon {
-  width: 135px;
-  height: 37px;
+  width: 110px;
+  height: auto;
   transition: transform 0.2s ease;
 }
-
 .premium-access-button:hover .premium-icon {
   transform: scale(1.05);
 }
-
-/* Забезпечуємо, що контейнер кнопок авторизації підтримує нову кнопку */
 .auth-buttons-container {
   display: flex;
   gap: 25px;
