@@ -12,7 +12,7 @@ import gamesIcon from "../assets/stats/games.png";
 import contactsIcon from "../assets/stats/contacts.png";
 import loginIcon from "../assets/stats/login.png";
 import profileIcon from "../assets/stats/profile.png";
-
+import premprofIcon from "../assets/stats/premprof.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -33,6 +33,10 @@ const Header = () => {
     navigate("/login");
   };
 
+  const handlePremiumClick = () => {
+    navigate("/premium");
+  };
+
   return (
     <header className="header">
       <nav className="navbar">
@@ -48,7 +52,7 @@ const Header = () => {
             <img src={languagesIcon} alt="Мови" className="nav-button" />
           </li>
           <li className="nav-item" onClick={() => navigate("/recommendations")}>
-            <img src={recommendationsIcon} alt="Рекомендації" className="nav-button" />
+            <img src={recommendationsIcon} alt="Рек recommendation" className="nav-button" />
           </li>
           <li className="nav-item" onClick={() => navigate("/games")}>
             <img src={gamesIcon} alt="Ігри" className="nav-button" />
@@ -58,18 +62,18 @@ const Header = () => {
           </li>
         </ul>
 
-        {/* 👇 Кнопка профілю або входу */}
         <div className="auth-buttons-container">
+          <button className="auth-button premium-access-button" onClick={handlePremiumClick}>
+            <img src={premprofIcon} alt="Преміум" className="premium-icon" />
+          </button>
           {isLoggedIn ? (
             <button className="auth-button profile-access-button" onClick={handleProfileClick}>
-            <img src={profileIcon} alt="Мій профіль" className="profile-icon" />
-          </button>
-          
+              <img src={profileIcon} alt="Мій профіль" className="profile-icon" />
+            </button>
           ) : (
             <button className="auth-button login-access-button" onClick={handleLoginClick}>
-  <img src={loginIcon} alt="Увійти" className="login-icon" />
-</button>
-
+              <img src={loginIcon} alt="Увійти" className="login-icon" />
+            </button>
           )}
         </div>
       </nav>

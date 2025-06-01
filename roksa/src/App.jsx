@@ -14,8 +14,8 @@ import Games from "./components/games";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Test from "./components/Test";
-import Grammar from "./components/grammar"; // ✅ Імпорт Grammar
-
+import Grammar from "./components/grammar";
+import Premium from "./components/premium"; // Added Premium import
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,7 +36,8 @@ const App = () => {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/games" element={<Games />} />
-          <Route path="/grammar" element={<Grammar />} /> {/* ✅ Доданий маршрут */}
+          <Route path="/grammar" element={<Grammar />} />
+          <Route path="/premium" element={<Premium />} /> {/* Added Premium route */}
           <Route
             path="/profile"
             element={isLoggedIn ? <Profile /> : <Navigate to="/login" />}

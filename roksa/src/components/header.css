@@ -7,9 +7,9 @@
 /* Логотип */
 .logo {
   display: flex;
-  align-items: center;         /* Центрування по вертикалі */
-  margin-left: 80px;  
-  margin-top: -3px;                 /* Прибираємо відступи */
+  align-items: center;
+  margin-left: 80px;
+  margin-top: -3px;
 }
 
 /* Меню */
@@ -18,9 +18,10 @@
   gap: 20px;
   list-style: none;
   padding: 0;
-  margin-right: 230px;
+  margin-right: -200px; /* Reduced from 230px to decrease distance to Premium button */
+  margin-left: 600px;
   margin-top: 4px;
-  align-items: center;         /* Центрування іконок по вертикалі */
+  align-items: center;
 }
 
 .nav-item {
@@ -41,22 +42,22 @@
   transition: filter 0.3s ease;
 }
 
-
 .nav-item:hover .nav-icon {
   filter: brightness(1.2) saturate(1.5);
 }
+
 /* Контейнер navbar */
 .navbar {
   display: flex;
-  align-items: left;         /* Вирівнює все по центру по вертикалі */
-  justify-content: space-between;            /* Горизонтальні відступи */
-  margin-top: 57px;    
-  margin-right: 120px;        /* Можна забрати, якщо треба рівно з верхом */
-  background-color: transparent; /* або потрібний колір */
+  align-items: left;
+  justify-content: space-between;
+  margin-top: 57px;
+  margin-right: 120px;
+  background-color: transparent;
 }
 
 .nav-links li {
-  cursor: pointer; /* Курсор у вигляді руки при наведенні */
+  cursor: pointer;
 }
 
 .profile img {
@@ -68,12 +69,11 @@
 }
 
 .profile img:hover {
-  filter:  saturate(1.5);
+  filter: saturate(1.5);
 }
 
-
 .profile-button-container {
-  margin-left: 20px; /* або скільки треба */
+  margin-left: 20px;
 }
 
 .auth-button.login-access-button {
@@ -98,6 +98,33 @@
 }
 
 .auth-button.profile-access-button img.profile-icon {
-  width: 180px; /* або потрібний розмір */
+  width: 180px;
   height: 37px;
+}
+
+.premium-access-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.premium-icon {
+  width: 135px;
+  height: 37px;
+  transition: transform 0.2s ease;
+}
+
+.premium-access-button:hover .premium-icon {
+  transform: scale(1.05);
+}
+
+/* Забезпечуємо, що контейнер кнопок авторизації підтримує нову кнопку */
+.auth-buttons-container {
+  display: flex;
+  gap: 25px;
+  align-items: center;
 }

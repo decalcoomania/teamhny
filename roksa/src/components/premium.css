@@ -1,0 +1,83 @@
+.premium-container {
+    background-color: #FFCEC8;
+    min-height: 100vh;
+    padding: 150px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Added to position logo absolutely */
+}
+
+.premium-title {
+    font-size: 64px;
+    font-weight: 600;
+    color: #2A1D0B;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: wrap;
+}
+
+.plan-wrapper {
+    position: relative;
+}
+
+.plan-image {
+    width: 590px;
+    height: 700px;
+}
+
+.hedgehog-image {
+    position: absolute;
+    top: 235px;
+    left: 340px;
+    width: 550px;
+    height: 550px;
+}
+
+.plan-button {
+    position: absolute;
+    bottom: 110px;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 265px;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.basic-plan-button {
+    background-color: #FFCEC8;
+    color: #F85A75;
+}
+
+.premium-plan-button {
+    background-color: #F85A75;
+    color: #FFF7EF;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    cursor: pointer;
+}
