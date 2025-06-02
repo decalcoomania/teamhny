@@ -18,9 +18,6 @@ import additionalButton from "../assets/stats/your-button.png";
 import exitIcon from "../assets/stats/exit.png";
 import "./profile.css";
 import strike from '../assets/stats/strike.png';
-import profilebut1 from '../assets/stats/profilebut.png';
-import profilebut2 from '../assets/stats/profilebut.png';
-import profilebut3 from '../assets/stats/profilebut.png';
 
 const Profile = () => {
   const [showModal, setShowModal] = useState(false);

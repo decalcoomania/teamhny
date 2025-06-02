@@ -65,7 +65,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 140px;
 }
 
 .user-avatar {
@@ -136,9 +136,10 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  font-family: 'Unbounded', cursive, sans-serif;
   margin-top: 20px;
   transition: background 0.3s;
 }
@@ -149,13 +150,14 @@
 
 .additional-image-block {
   text-align: center;
-  margin-top: 420px;
+  margin-top: 450px;
   margin-right: 1220px;
 }
 
 .additional-image {
   width: 230px;
   height: auto;
+  margin-top: 100px;
 }
 
 .under-additional-button img {
@@ -166,20 +168,20 @@
 
 .extra-image-block {
   text-align: center;
-  margin-top: 20px;
+  margin-top: -190px;
 }
 
 .extra-image {
   width: 450px;
   height: auto;
-  margin-top: -992px;
+  margin-top: -100px;
   margin-right: 460px;
 }
 .user-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* або center */
-  margin-top: -650px;
+  margin-top: -667px;
   font-size: 18px;
   line-height: 1.6;
   margin-left: 460px;
@@ -195,7 +197,7 @@
   margin-left: 985px;
   max-width: 710px;
   height: auto;
-  margin-top: 230px;
+  margin-top: 250px;
 }
 .image-row {
   display: flex;
@@ -247,9 +249,9 @@
 
 .slot-container {
   width: 210px;       /* розмір слота як у тебе */
-  height: 160px;      /* трошки більше для кнопки */
-  border-radius: 10px;
-  border: 2px solid #ccc; /* або як у тебе */
+  height: 180px;      /* трошки більше для кнопки */
+  border-radius: 20px;
+  border: 4px solid #FFCEC8; /* або як у тебе */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,6 +266,7 @@
   max-height: 110px;  /* щоб не було великою */
   object-fit: contain;
   margin-bottom: 8px;
+  border-radius: 10px;
 }
 
 .continue-btn {
@@ -272,7 +275,7 @@
   border: none;
   border-radius: 20px;
   padding: 6px 14px;
-  font-weight: 600;
+  font-weight: 480;
   cursor: pointer;
   font-family: 'Unbounded', sans-serif;
   font-size: 14px;

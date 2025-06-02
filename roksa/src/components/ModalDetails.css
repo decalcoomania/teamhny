@@ -1,4 +1,4 @@
-.modal-overlay {
+.modall-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-.modal-content {
+.modall-content {
   background-color: #fff8e8;
   border-radius: 20px;
   border: 3px solid #F85A75;
@@ -29,12 +29,12 @@
   overflow-y: auto;
 }
 
-.modal-close-btn {
+.modall-close-btn {
   position: absolute;
   top: 16px;
   right: 16px;
   background-color: #F85A75;
-  border: 2px solid #C33048;
+  border: 2px solid #F85A75;
   color: white;
   font-weight: 600;
   border-radius: 9999px;
@@ -42,24 +42,24 @@
   cursor: pointer;
 }
 
-.modal-close-btn:hover {
+.modall-close-btn:hover {
   background-color: #C33048;
 }
 
-.modal-body {
+.modall-body {
   display: flex;
   gap: 24px;
   margin-top: 40px;
 }
 
-.modal-left {
+.modall-left {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.modal-img {
+.modall-img {
   width: 100%;
   max-width: 320px;
   border-radius: 20px;
@@ -70,9 +70,9 @@
   margin-top: 16px;
   padding: 8px 24px;
   border-radius: 9999px;
-  border: 2px solid #C33048;
+  border: 2px solid #F85A75;
   background-color: white;
-  color: #C33048;
+  color: #F85A75;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -89,34 +89,35 @@
   border-color: #F85A75;
 }
 
-.modal-right {
+.modall-right {
   flex: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.modal-title {
-  font-size: 32px;
+.modall-title {
+  font-size: 38px;
   font-weight: 700;
-  color: #C33048;
+  color: #F85A75;
   margin-bottom: 16px;
+  margin-right: 70px;
 }
 
-.modal-description {
+.modall-description {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
   flex-grow: 1;
 }
 
-.modal-info p {
-  margin: 6px 0;
-  font-size: 14px;
+.modall-info p {
+  margin-bottom: 50px;
+  font-size: 16px;
   color: #000;
 }
 
-.modal-visit-btn {
+.modall-visit-btn {
   margin-top: 24px;
   align-self: flex-end;
   padding: 10px 28px;
@@ -128,6 +129,6 @@
   cursor: pointer;
 }
 
-.modal-visit-btn:hover {
+.modall-visit-btn:hover {
   background-color: #C33048;
 }
