@@ -129,48 +129,58 @@ const Profile = () => {
 
       <img src={strike} alt="Самостійна картинка" className="strike" />
 
-<div className="images-wrapper">
-  <div className="image-row">
-    {[0,1,2].map(i => (
-      <div key={i} className="slot-container">
-        {savedImages[i] ? (
-          <>
-            <img src={savedImages[i].img} alt={savedImages[i].title} className="slot-image" />
-            <button
-              className="continue-btn"
-              onClick={() => navigate('/path-to-detail-page')}
-            >
-              Продовжити
-            </button>
-          </>
-        ) : (
-          <div className="empty-slot"></div>
-        )}
+      <div className="images-wrapper">
+        <div className="image-row">
+          {[0,1,2].map(i => (
+            <div key={i} className="slot-container">
+              {savedImages[i] ? (
+                <>
+                  <img src={savedImages[i].img} alt={savedImages[i].title} className="slot-image" />
+                  <button
+                    className="continue-btn"
+                    onClick={() => {
+                      if(savedImages[i].link) {
+                        window.open(savedImages[i].link, '_blank');
+                      } else {
+                        alert('Посилання відсутнє');
+                      }
+                    }}
+                  >
+                    Продовжити
+                  </button>
+                </>
+              ) : (
+                <div className="empty-slot"></div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="image-row">
+          {[3,4,5].map(i => (
+            <div key={i} className="slot-container">
+              {savedImages[i] ? (
+                <>
+                  <img src={savedImages[i].img} alt={savedImages[i].title} className="slot-image" />
+                  <button
+                    className="continue-btn"
+                    onClick={() => {
+                      if(savedImages[i].link) {
+                        window.open(savedImages[i].link, '_blank');
+                      } else {
+                        alert('Посилання відсутнє');
+                      }
+                    }}
+                  >
+                    Продовжити
+                  </button>
+                </>
+              ) : (
+                <div className="empty-slot"></div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-  <div className="image-row">
-    {[3,4,5].map(i => (
-      <div key={i} className="slot-container">
-        {savedImages[i] ? (
-          <>
-            <img src={savedImages[i].img} alt={savedImages[i].title} className="slot-image" />
-            <button
-              className="continue-btn"
-              onClick={() => navigate('/path-to-detail-page')}
-            >
-              Продовжити
-            </button>
-          </>
-        ) : (
-          <div className="empty-slot"></div>
-        )}
-      </div>
-    ))}
-  </div>
-</div>
-
-
 
       {showModal && (
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
