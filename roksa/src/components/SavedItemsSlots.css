@@ -1,0 +1,23 @@
+.images-wrapper {
+  flex-direction: column;
+  margin-top: -670px; /* Якщо потрібно, коригуй */
+  margin-left: 822px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.standalone-image {
+  width: 210px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.standalone-image:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

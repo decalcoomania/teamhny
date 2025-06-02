@@ -205,7 +205,8 @@
 }
 
 .standalone-image {
-  width: 210px;
+  width: 86px;
+  height: 123;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -234,4 +235,58 @@
 
 .custom-button-image:hover {
   transform: scale(1.05);
+}
+
+.empty-slot {
+  background-color: #fff8e8;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  width: 210px;
+  height: 118px; /* або відповідно до .standalone-image */
+}
+
+.slot-container {
+  width: 210px;       /* розмір слота як у тебе */
+  height: 160px;      /* трошки більше для кнопки */
+  border-radius: 10px;
+  border: 2px solid #ccc; /* або як у тебе */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff8e8;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.slot-image {
+  max-width: 100%;
+  max-height: 110px;  /* щоб не було великою */
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.continue-btn {
+  background-color: #F85A75;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background-color: #c33048;
+}
+
+.empty-slot {
+  border: none; /* або просто прибрати цю властивість */
+  background-color: #fff8e8; /* щоб фон залишився, якщо потрібно */
+  width: 200px; /* як у твоїх слотів */
+  height: 160px; /* відповідно */
+  border-radius: 10px;
 }
