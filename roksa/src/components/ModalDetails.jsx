@@ -35,7 +35,6 @@ const ModalDetails = ({ item, onClose }) => {
     let savedItems = favDocSnap.exists() ? favDocSnap.data().savedItems || [] : [];
 
     if (saved) {
-      // Видаляємо елемент
       await updateDoc(favDocRef, {
         savedItems: arrayRemove(item)
       });
@@ -55,7 +54,7 @@ const ModalDetails = ({ item, onClose }) => {
   return (
     <div className="modall-overlay" onClick={onClose}>
       <div className="modall-content" onClick={e => e.stopPropagation()}>
-        <button className="modall-close-btn" onClick={onClose}>Закрити</button>
+        <button className="modall-close-btn" onClick={onClose}>X</button>
         <div className="modall-body">
           <div className="modall-left">
             <img src={item.img} alt={item.title} className="modall-img" />
@@ -76,7 +75,7 @@ const ModalDetails = ({ item, onClose }) => {
               <p><strong>Жанр:</strong> {item.genre || '---'}</p>
             </div>
             <button className="modall-visit-btn" onClick={() => window.open(item.link || '#', '_blank')}>
-              Перейти
+              Перейти на офіційний сайт
             </button>
           </div>
         </div>

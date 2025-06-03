@@ -120,12 +120,12 @@
 .modall-visit-btn {
   margin-top: 24px;
   align-self: flex-end;
-  padding: 10px 28px;
+  padding: 16px 36px;
   background-color: #F85A75;
   border: none;
   border-radius: 9999px;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
 }
 

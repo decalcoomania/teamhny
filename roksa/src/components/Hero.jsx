@@ -94,7 +94,7 @@ const Hero = () => {
                 src={joinbut}
                 alt="Кнопка зверху - Discord"
                 className="button-discord"
-                onClick={() => console.log("Натиснуто звичайний Discord")}
+                onClick={() => window.open("https://discord.gg/BeNxHtaT", "_blank")}
               />
               <img
                 src={prembut}
