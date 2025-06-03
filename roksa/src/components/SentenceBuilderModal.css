@@ -1,0 +1,106 @@
+.sb-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sb-modal-content {
+  background: #fff8e8;
+  padding: 30px;
+  border-radius: 20px;
+  width: 500px;
+  max-width: 90vw;
+  position: relative;
+  font-family: 'Unbounded', sans-serif;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.sb-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #c33048;
+  z-index: 10;
+}
+
+.sb-sentence-box {
+  min-height: 60px;
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid #c33048;
+  border-radius: 12px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sb-placeholder {
+  color: #ccc;
+  font-style: italic;
+}
+
+.sb-word-in-sentence {
+  background-color: #F85A75;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.sb-words-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sb-word-btn {
+  background-color: #FFD6D3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sb-word-btn:hover {
+  background-color: #FF9DB2;
+}
+
+.sb-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sb-clear-btn, .sb-check-btn {
+  background-color: #F85A75;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sb-clear-btn:hover, .sb-check-btn:hover {
+  background-color: #c33048;
+}

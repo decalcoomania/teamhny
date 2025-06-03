@@ -1,18 +1,51 @@
-import React, { useState } from 'react'; // ⬅️ додано useState
+import React, { useState } from 'react';
 import GameCard from '../components/GameCard';
 import Header from '../components/header';
 import './games.css';
-import Modal from '../components/Modal';
+import Modal from '../components/Modal'; // старе модальне вікно
+import SentenceBuilderModal from '../components/SentenceBuilderModal'; // нове модальне вікно "Склади речення"
+import FlashcardsModal from '../components/FlashcardsModal'; // модальне вікно флеш-карток
 
 import puzzleIcon from '../assets/stats/puzzle.png';
 import countriesIcon from '../assets/stats/countries.png';
 import flashCardIcon from '../assets/stats/flash-card.png';
 
 const Games = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOldModalOpen, setIsOldModalOpen] = useState(false);
+  const [isSentenceBuilderOpen, setIsSentenceBuilderOpen] = useState(false);
+  const [isFlashcardsOpen, setIsFlashcardsOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openOldModal = () => setIsOldModalOpen(true);
+  const closeOldModal = () => setIsOldModalOpen(false);
+
+  const openSentenceBuilderModal = () => setIsSentenceBuilderOpen(true);
+  const closeSentenceBuilderModal = () => setIsSentenceBuilderOpen(false);
+
+  const openFlashcardsModal = () => setIsFlashcardsOpen(true);
+  const closeFlashcardsModal = () => setIsFlashcardsOpen(false);
+
+  const exercises = [
+    {
+      words: ["I", "a","yesterday", "book", "read"],
+      correctSentence: "I read a book yesterday"
+    },
+    {
+      words: ["is", "to", "going", "school", "She", "now"],
+      correctSentence: "She is going to school now"
+    },
+    {
+      words: ["They", "their", "finished", "homework", "have",],
+      correctSentence: "They have finished their homework"
+    },
+    {
+      words: ["are", "We","movie", "watching", "a",],
+      correctSentence: "We are watching a movie"
+    },
+    {
+      words: ["come", "tomorrow", "will", "He"],
+      correctSentence: "He will come tomorrow"
+    },
+  ];
 
   return (
     <div className="games-wrapper">
@@ -27,7 +60,7 @@ const Games = () => {
             headerBackground="#FFD6D3"
             titleColor="#C33048"
             textColor="#000000"
-            onClick={openModal}
+            onClick={openSentenceBuilderModal}
           />
           <GameCard
             title="Вгадай країну"
@@ -37,7 +70,7 @@ const Games = () => {
             headerBackground="#F85A75"
             titleColor="#FFFFFF"
             textColor="#922436"
-            onClick={openModal}
+            onClick={openOldModal}
           />
           <GameCard
             title="Флеш-картки"
@@ -47,10 +80,22 @@ const Games = () => {
             headerBackground="#FFFFFF"
             titleColor="#35240E"
             textColor="#FFFFFF"
-            onClick={openModal}
+            onClick={openFlashcardsModal}
           />
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} />
+
+        {/* Старе модальне вікно */}
+        <Modal isOpen={isOldModalOpen} onClose={closeOldModal} />
+
+        {/* Нове модальне вікно "Склади речення" */}
+        <SentenceBuilderModal 
+          isOpen={isSentenceBuilderOpen} 
+          onClose={closeSentenceBuilderModal} 
+          exercises={exercises} 
+        />
+
+        {/* Модальне вікно флеш-карток */}
+        <FlashcardsModal isOpen={isFlashcardsOpen} onClose={closeFlashcardsModal} />
       </div>
     </div>
   );
